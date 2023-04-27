@@ -33,7 +33,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<img src="images/logo.png" />
+				<img src="/app/public/images/logo.png" />
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">
@@ -43,28 +43,33 @@
 			</div>
 		</div>
 	</nav>
-
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="noticia_wrapper">
-					<span class="noticia_autor"><%=noticia[0].autor%></span>
-					<a href="noticia/1" class="noticia_titulo"><%=noticia[0].titulo%></a>
-					<span class="noticia_data"><%=noticia[0].data_criacao%></span>
+					<span class="noticia_autor">
+						<%= noticia.autor%>
+					</span>
+					<a href="/noticia/<%= noticia.id_noticias %>">
+						<%= noticia.titulo %>
+					</a>
+					<span class="noticia_data">
+						<%=noticia.data_noticia%>
+					</span>
 					<br />
 					<p class="noticia_resumo">
-						<%=noticia[0].noticia%>
+						<%=noticia.noticia%>
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
-
+	<script src="/app/controllers/noticias.js"></script>
 </body>
 
 </html>

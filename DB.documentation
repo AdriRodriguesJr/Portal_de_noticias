@@ -1,0 +1,9 @@
+create DATABASE noticias;
+
+create table noticias(
+id_noticias int not null PRIMARY KEY auto_increment,
+titulo VARCHAR(100),
+resumo VARCHAR(100),
+noticia text,
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+autor VARCHAR (30));
