@@ -1,0 +1,8 @@
+{
+    "debug.javascript.autoAttachSmartPattern": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+        "**/$KNOWN_TOOLS$/**",
+        "    \"emmet.includeLanguages\": {         \"ejs\": \"html\",     },"
+    ]
+}

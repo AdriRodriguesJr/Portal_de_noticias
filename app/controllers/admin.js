@@ -5,6 +5,8 @@ module.exports.formulario_inclusao_noticia = function (application, req, res) {
 module.exports.noticias_salvar = function (application, req, res) {
     var noticia = req.body;
 
+    console.log('Notícia a ser salva:', noticia);
+
     req.assert('titulo', 'Título é obrigatório').notEmpty();
     req.assert('resumo', 'Resumo é obrigatório').notEmpty();
     req.assert('resumo', 'Resumo deve conter entre 10 e 100 caracteres').len(10, 100);
